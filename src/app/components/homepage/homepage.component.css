@@ -1,0 +1,97 @@
+.home-page {
+  background-image: linear-gradient(
+    to left top,
+    rgb(134, 239, 172),
+    rgb(192, 132, 252)
+  );
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  color: white;
+  font-family: "Righteous";
+  letter-spacing: 2px;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  margin: 3em;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+h4 {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+button {
+  background: #ff8500;
+  color: #ffffff;
+  padding: 0.75rem;
+  margin-bottom: 2rem;
+  border-radius: 0.75rem;
+  font-size: 1.6rem;
+  font-family: "Righteous";
+  border-color: transparent;
+}
+
+button:hover{
+    background: #fca016;
+    cursor: pointer;
+}
+
+span{
+    text-decoration: underline;
+}
+
+span:hover{
+    color: blue;
+    cursor: pointer;
+}
+
+@media (max-width: 640px) {
+    .home-container{
+        letter-spacing: 1px;
+    }
+    .home-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5em;
+        margin: 1em;
+      }
+      
+      h2 {
+        font-size: 1em;
+      }
+      
+      h4 {
+        font-size: 0.75em;
+        margin-bottom: 0.5em;
+      }
+      
+      button {
+        background: #ff8500;
+        color: #ffffff;
+        padding: 0.50rem;
+        margin-bottom: 1rem;
+        border-radius: 0.40rem;
+        font-size: 1rem;
+        font-family: "Righteous";
+        border-color: transparent;
+      }
+      
+     p{
+        font-size: 0.6em;
+     }
+}
