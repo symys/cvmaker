@@ -89,3 +89,7 @@
           font-size: 0.6em;
        }
   }
+
+  .error-messages{
+    color: rgb(233, 66, 66);
+  }
