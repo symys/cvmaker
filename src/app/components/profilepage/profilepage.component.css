@@ -1,0 +1,156 @@
+.profile-page {
+  background-image: linear-gradient(
+    to left top,
+    rgb(134, 239, 172),
+    rgb(192, 132, 252)
+  );
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  color: white;
+  font-family: "Righteous";
+  letter-spacing: 2px;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  margin: 3em;
+  width: 80vw;
+}
+
+button {
+  background: #ff8500;
+  color: #ffffff;
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+  font-size: 1.2rem;
+  font-family: "Righteous";
+  border-color: transparent;
+  top: 1em;
+  right: 1em;
+  position: absolute;
+}
+
+button:hover {
+  background: #fca016;
+  cursor: pointer;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+input {
+  padding: 1rem;
+  margin: 1em;
+  border-radius: 0.5rem;
+  border-color: transparent;
+  background-color: #f9fafb;
+  width: 30em;
+}
+
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#search-icon {
+  height: 3em;
+  position: absolute;
+  right: 1em;
+}
+
+img:hover {
+  cursor: pointer;
+}
+
+#addcv-icon {
+  height: 10em;
+  max-width: 15em;
+  min-height: 15em;
+}
+
+#cv-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  min-width: 80vw;
+}
+
+.cvkayit {
+  display: flex;
+  flex-direction: row;
+  border-radius: 0.5rem;
+  border-color: #e5e7eb;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  max-width: 15em;
+  min-height: 15em;
+}
+
+@media (max-width: 640px) {
+    h3 {
+        margin-top: 2em;
+        font-size: 1.5em;
+      }
+
+      input {
+        padding: 1rem;
+        margin: 1em;
+        border-radius: 0.5rem;
+        border-color: transparent;
+        background-color: #f9fafb;
+        width: 60vw;
+      }
+      
+      
+      #search-icon {
+        height: 2em;
+        position: absolute;
+        right: 1.2em;
+      }
+
+    button {
+        background: #ff8500;
+        color: #ffffff;
+        padding: 0.50rem;
+        margin-bottom: 1rem;
+        border-radius: 0.40rem;
+        font-size: 1rem;
+        font-family: "Righteous";
+        border-color: transparent;
+      }
+
+      #cv-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+        min-width: 80vw;
+      }
+
+      #addcv-icon {
+        height: 8em;
+        max-width: 10em;
+        min-height: 10em;
+      }
+      
+      
+      .cvkayit {
+        max-width: 12em;
+        min-height: 12em;
+      }
+}
