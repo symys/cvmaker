@@ -1,0 +1,162 @@
+.newcv-page {
+  background-image: linear-gradient(
+    to left top,
+    rgb(134, 239, 172),
+    rgb(192, 132, 252)
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: "Righteous";
+  letter-spacing: 2px;
+}
+
+
+#photo-container{
+margin-top: 5em;
+margin-right: 1em;
+text-align: center;
+}
+
+#add-photo{
+    width: 5em;
+}
+
+#add-photo:hover{
+    cursor: pointer;
+}
+
+.newcv-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  margin: 3em;
+}
+
+input {
+  padding: 1rem;
+  margin: 1em;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  background-color: #f9fafb;
+  width: 16em;
+}
+
+#talent-section,
+#summary-section {
+  text-align: start;
+  padding: 1rem;
+  margin: 1em;
+  border-radius: 0.5rem;
+  border: 1px solid #e2e8f0; /* Kenarlık ekleme */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* Gölge ekleme */
+  background-color: #f9fafb;
+  width: 36em;
+  min-height: 5em; /* Dikeyde minimum yükseklik belirleme */
+  resize: vertical;
+  overflow: auto;
+}
+
+::placeholder {
+  font-family: "Righteous";
+  letter-spacing: 0.1em;
+}
+
+button {
+  background: #8400ff;
+  color: #ffffff;
+  padding: 0.75rem;
+  margin-bottom: 2rem;
+  border-radius: 0.75rem;
+  font-size: 1.6rem;
+  font-family: "Righteous";
+  border-color: transparent;
+}
+
+button:hover {
+  background: #a016fc;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+    .newcv-page {
+        background-image: linear-gradient(
+          to left top,
+          rgb(134, 239, 172),
+          rgb(192, 132, 252)
+        );
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        color: white;
+        font-family: "Righteous";
+        letter-spacing: 2px;
+      }
+      
+
+      #photo-container{
+      margin-top: 2em;
+      text-align: center;
+      }
+      
+      #add-photo{
+          width: 3em;
+      }
+
+      
+      .newcv-container {
+        letter-spacing: 1px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5em;
+
+      }
+      
+      input {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-width: 1px;
+        background-color: #f9fafb;
+        width: 70vw;
+      }
+      
+      #talent-section,
+      #summary-section {
+        text-align: start;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border: 1px solid #e2e8f0; /* Kenarlık ekleme */
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* Gölge ekleme */
+        background-color: #f9fafb;
+        width: 70vw;
+        min-height: 5em; /* Dikeyde minimum yükseklik belirleme */
+        resize: vertical;
+        overflow: auto;
+      }
+      
+      ::placeholder {
+        font-family: "Righteous";
+        letter-spacing: 0.1em;
+      }
+      
+      button {
+        background: #8400ff;
+        color: #ffffff;
+        padding: 0.50rem;
+        border-radius: 0.40rem;
+        font-size: 1rem;
+        font-family: "Righteous";
+        border-color: transparent;
+      }
+      
+
+      
+}
