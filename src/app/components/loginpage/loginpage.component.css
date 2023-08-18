@@ -89,3 +89,7 @@ span:hover {
         font-size: 0.6em;
      }
 }
+
+.error-messages{
+  color: red;
+}

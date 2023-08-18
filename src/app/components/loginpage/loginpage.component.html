@@ -1,10 +1,60 @@
 <div class="login-page">
   <div class="login-container">
     <div id="logo">logo here</div>
-
-      <input type="email" placeholder="Lütfen email adresinizi yazın" />
-      <input type="password" placeholder="Lütfen şifrenizi girin" />
+    <form  class="login-container" 
+      [formGroup]="registerForm"
+      (ngSubmit)="onSubmit()"
+ 
+    >
+      <!-- <input type="email" placeholder="Lütfen email adresinizi yazın" /> -->
+      <div>
+        <input
+          type="text"
+          (ngClass)="
+            ({
+              isValid: submitted && registerForm.controls['email'].errors
+            })
+          "
+          formControlName="email"
+          placeholder="email"
+        />
+        <div  class="error-messages" 
+          *ngIf="submitted && registerForm.controls['email'].errors"
+        >
+          <div
+            *ngIf="
+              submitted && registerForm.controls['email'].errors['required']
+            "
+          >
+            Email is required
+          </div>
+          <div
+            *ngIf="submitted && registerForm.controls['email'].errors['email']"
+          >
+            Please write a valid email
+          </div>
+        </div>
+      </div>
+      <!-- <input type="password" placeholder="Lütfen şifrenizi girin" /> -->
+      <div >
+        <input
+          type="password"
+          (ngClass)="
+            ({
+              isValid:
+                submitted && registerForm.controls['password'].errors
+            })
+          "
+          formControlName="password"
+          placeholder="password"
+        />
+        <div *ngIf="submitted && registerForm.controls['password'].errors"  class="error-messages">
+          <div *ngIf="submitted && registerForm.controls['password'].errors['required']" >Password is required</div>
+          <div *ngIf="submitted && registerForm.controls['password'].errors['minLength']" >Minimum password length must be 6</div>
+        </div>
+      </div>
       <button id="login-button">GİRİŞ YAP</button>
+    </form>
 
     <p>
       Henüz bir hesabın yok mu?
