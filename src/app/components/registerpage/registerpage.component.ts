@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'; 
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http'
+import { RegisterService } from 'src/app/services/register.service';
 
 @Component({
   selector: 'app-registerpage',
@@ -13,7 +15,7 @@ export class RegisterpageComponent {
   title='formvalidation';
   submitted=false;
   
-  constructor(private formBuilder:FormBuilder, private router: Router){}
+  constructor(private formBuilder:FormBuilder, private router: Router, private http: HttpClient,private registerService:RegisterService){}
 
   ngOnInit(){
     // validation rules
@@ -29,6 +31,24 @@ export class RegisterpageComponent {
     if(this.registerForm.invalid){
       return
     }
-    else{this.router.navigate(['/profile']); }
+    else{
+    const email=this.registerForm.value.email;
+    const password=this.registerForm.value.password;
+
+    // console.log("ben email:" + email)
+    // console.log("ben sifre:" + password)
+
+    this.registerService.signUp(email, password).subscribe(
+      response => {
+        console.log(response);
+      },
+      error => {
+        console.error('Error while saving data:', error);
+      }
+    );
+    
+
+    this.router.navigate(['/profile']); 
+    }
   }
 }

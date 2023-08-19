@@ -1,0 +1,28 @@
+
+    {
+      "email": "a@gmail.com",
+      "password": "1234567",
+      "resumes":[
+        {
+            "name":"Seyma",
+            "lastname":"Demir",
+            "age":28,
+            "birthday":"23.11.1994",
+            "birthcity":"Konya",
+            "birthcountry":"Türkiye",
+            "talents":"photoshop",
+            "summary":"She is a curious frontend developer"
+        },
+        {
+            "name":"Seyma",
+            "lastname":"Demir",
+            "age":28,
+            "birthday":"23.11.1994",
+            "birthcity":"Konya",
+            "birthcountry":"Türkiye",
+            "talents":"tenis",
+            "summary":"She is a curious to botanic"
+        }
+      ]
+    }
+  

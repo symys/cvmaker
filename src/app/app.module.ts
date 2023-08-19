@@ -9,6 +9,7 @@ import { ProfilepageComponent } from './components/profilepage/profilepage.compo
 import { CvdetailpageComponent } from './components/cvdetailpage/cvdetailpage.component';
 import { CreatecvpageComponent } from './components/createcvpage/createcvpage.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HomepageComponent } from './components/homepage/homepage.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
