@@ -15,6 +15,26 @@
           "birthcountry": "Türkiye",
           "talents": "Photoshop",
           "summary": "Frontend developer"
+        },
+        {
+          "title": "Ali",
+          "name": "kdfjnsvmk",
+          "lastname": "dsfsjkl",
+          "age": 0,
+          "birthcity": "",
+          "birthcountry": "",
+          "talents": "",
+          "summary": ""
+        },
+        {
+          "title": "hey",
+          "name": "",
+          "lastname": "",
+          "age": 0,
+          "birthcity": "",
+          "birthcountry": "",
+          "talents": "",
+          "summary": ""
         }
       ]
     }

@@ -4,7 +4,7 @@
 <button (click)="logOut()" id="logout-button">LOGOUT</button>
     <h3>KAYITLI CV'LERİM</h3>
     <div class="search-bar">
-        <input type="text" placeholder="CV Ara..." />
+        <input type="text" placeholder="CV Ara..." [(ngModel)]="searchText" (input)="filterCvs()"/>
         <img id="search-icon" src="../../../assets/search (1).png" />
       </div>
 
