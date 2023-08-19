@@ -61,7 +61,10 @@ export class RegisterpageComponent {
           }
         );
   
-        this.router.navigate(['/profile']);
+        // this.router.navigate(['/login']);
+        setTimeout(() => {
+          this.router.navigate(['/login']);
+        }, 3000);
       }
 
       // console.log("ben email:" + email)
