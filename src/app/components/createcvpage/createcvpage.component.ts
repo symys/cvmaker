@@ -15,6 +15,7 @@ export class CreatecvpageComponent {
     private router: Router
   ) {}
 
+  title:string="";
   name: string = '';
   lastname: string = '';
   age: number = 0;
@@ -33,11 +34,13 @@ export class CreatecvpageComponent {
   }
 
   submitCv() {
-    const loggedInUserId = this.authService.getLoggedInUserId();
+    if(this.title !== ""){
+      const loggedInUserId = this.authService.getLoggedInUserId();
     const user = this.users.find((u: any) => u.id === loggedInUserId);
 
     // console.log(user)
     const newCv = {
+      title:this.title,
       name: this.name,
       lastname: this.lastname,
       age: this.age,
@@ -54,5 +57,8 @@ export class CreatecvpageComponent {
       this.router.navigate(['/profile'])
     })
     
+    } else{
+      alert("Lütfen bir başlık belirleyiniz")
+    }
   }
 }

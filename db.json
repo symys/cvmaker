@@ -6,6 +6,7 @@
       "password": "1234567",
       "cvList": [
         {
+          "title": "SeymaCV",
           "name": "Seyma",
           "lastname": "Demir",
           "age": "28",
@@ -14,16 +15,6 @@
           "birthcountry": "Türkiye",
           "talents": "Photoshop",
           "summary": "Frontend developer"
-        },
-        {
-          "name": "asdfgh",
-          "lastname": "sfzdgfxhgj",
-          "age": "0dfzdgxfhg",
-          "birthday": "2023-08-05",
-          "birthcity": "sadf",
-          "birthcountry": "d<szfdgx",
-          "talents": "dfsdzgfx",
-          "summary": "d<sfzdgxfhg"
         }
       ]
     }

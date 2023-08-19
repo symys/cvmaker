@@ -15,9 +15,13 @@
 
 
 #photo-container{
+  display: flex;
+  flex-direction: column;
 margin-top: 5em;
 margin-right: 1em;
 text-align: center;
+align-items: center;
+justify-content: center;
 }
 
 #add-photo{

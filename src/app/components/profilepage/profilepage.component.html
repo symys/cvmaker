@@ -11,7 +11,7 @@
       <div id="cv-container">
         <img [routerLink]="['/addcv']" routerLinkActive="router-link-active" id="addcv-icon" src="../../../assets/addcv.png" />
         <div class="cvkayit" *ngFor="let cv of user?.cvList">
-          {{ cv.name }} <!-- ya da istediğiniz diğer cv özelliklerini burada gösterin -->
+          {{ cv.title }} <!-- ya da istediğiniz diğer cv özelliklerini burada gösterin -->
         </div>
       </div>
     
