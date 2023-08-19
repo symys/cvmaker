@@ -11,9 +11,11 @@ export class RegisterService {
   constructor(private http: HttpClient) {}
 
   signUp(email: string, password: string) {
+
     return this.http.post(this.url, {
       email: email,
       password: password
     })
   }
+
 }
