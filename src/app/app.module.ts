@@ -10,6 +10,7 @@ import { CvdetailpageComponent } from './components/cvdetailpage/cvdetailpage.co
 import { CreatecvpageComponent } from './components/createcvpage/createcvpage.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CvcardComponent } from './components/cvcard/cvcard.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     RegisterpageComponent,
     ProfilepageComponent,
     CvdetailpageComponent,
-    CreatecvpageComponent
+    CreatecvpageComponent,
+    CvcardComponent
   ],
   imports: [
     BrowserModule,

@@ -7,8 +7,15 @@
         <input type="text" placeholder="CV Ara..." />
         <img id="search-icon" src="../../../assets/search (1).png" />
       </div>
+
+      <div id="cv-container">
+        <img [routerLink]="['/addcv']" routerLinkActive="router-link-active" id="addcv-icon" src="../../../assets/addcv.png" />
+        <div class="cvkayit" *ngFor="let cv of user?.cvList">
+          {{ cv.name }} <!-- ya da istediğiniz diğer cv özelliklerini burada gösterin -->
+        </div>
+      </div>
     
-    <div id="cv-container">
+    <!-- <div id="cv-container">
       <img [routerLink]="['/addcv']" routerLinkActive="router-link-active"  id="addcv-icon" src="../../../assets/addcv.png" />
       <div class="cvkayit"></div>
       <div class="cvkayit"></div>
@@ -16,6 +23,6 @@
       <div class="cvkayit"></div>
       <div class="cvkayit"></div>
       <div class="cvkayit"></div>
-    </div>
+    </div> -->
   </div>
 </div>
