@@ -3,12 +3,10 @@
     {
       "id": 1,
       "email": "a@gmail.com",
-      "password": "1234567"
-    },
-    {
-      "email": "b@gmail.com",
-      "password": "12345678",
-      "id": 2
+      "password": "1234567",
+      "cvList": [
+       
+      ]
     }
   ]
 }

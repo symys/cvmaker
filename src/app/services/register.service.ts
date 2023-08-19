@@ -14,7 +14,8 @@ export class RegisterService {
 
     return this.http.post(this.url, {
       email: email,
-      password: password
+      password: password,
+      cvList:[]
     })
   }
 

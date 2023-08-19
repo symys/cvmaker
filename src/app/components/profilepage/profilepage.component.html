@@ -1,7 +1,7 @@
 <div class="profile-page">
   <div class="profile-container">
     
-<button [routerLink]="['/home']" routerLinkActive="router-link-active"  id="logout-button">LOGOUT</button>
+<button (click)="logOut()" id="logout-button">LOGOUT</button>
     <h3>KAYITLI CV'LERİM</h3>
     <div class="search-bar">
         <input type="text" placeholder="CV Ara..." />
@@ -9,7 +9,7 @@
       </div>
     
     <div id="cv-container">
-      <img id="addcv-icon" src="../../../assets/addcv.png" />
+      <img [routerLink]="['/addcv']" routerLinkActive="router-link-active"  id="addcv-icon" src="../../../assets/addcv.png" />
       <div class="cvkayit"></div>
       <div class="cvkayit"></div>
       <div class="cvkayit"></div>

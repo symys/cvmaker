@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-loginpage',
@@ -18,7 +19,8 @@ export class LoginpageComponent {
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
-    private http: HttpClient
+    private http: HttpClient,
+    private authService: AuthService
   ) {}
 
   ngOnInit() {
@@ -45,6 +47,8 @@ export class LoginpageComponent {
       const user = this.users.find((u: any) => u.email === email && u.password === password);
 
       if(user){
+        // console.log(user.id)
+        this.authService.login(user.id);
         this.router.navigate(['/profile']);
       }
       else{

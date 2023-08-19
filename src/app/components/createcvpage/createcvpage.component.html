@@ -7,21 +7,21 @@
     <div class="newcv-container">
       <!-- <div id="logo">logo here</div> -->
     <div class="input-divs">
-      <input placeholder="İsim" />
-      <input placeholder="Soyisim" />
+      <input placeholder="İsim" [(ngModel)]="name" />
+      <input placeholder="Soyisim" [(ngModel)]="lastname"/>
     </div>
     <div class="input-divs">
-      <input placeholder="Yaş" />
-      <input type="date" placeholder="Doğum Tarihi" />
+      <input placeholder="Yaş" [(ngModel)]="age"/>
+      <input type="date" placeholder="Doğum Tarihi" [(ngModel)]="birthday" />
     </div>
     <div class="input-divs">
-      <input placeholder="Doğum Yeri" />
-      <input placeholder="Ülke" />
+      <input placeholder="Doğum Yeri" [(ngModel)]="birthcity"/>
+      <input placeholder="Ülke" [(ngModel)]="birthcountry"/>
     </div>
 
-    <textarea id="talent-section" placeholder="Yetenek ve yetkinliklerinizden bahsediniz" ></textarea>
-    <textarea type="text" id="summary-section" placeholder="Kendinizden kısaca bahsediniz"></textarea>
-    <button id="login-button">KAYDET</button>
+    <textarea id="talent-section" placeholder="Yetenek ve yetkinliklerinizden bahsediniz" [(ngModel)]="talents" ></textarea>
+    <textarea type="text" id="summary-section" placeholder="Kendinizden kısaca bahsediniz" [(ngModel)]="summary"></textarea>
+    <button id="login-button" (click)="submitCv()">KAYDET</button>
     </div>
     
 
