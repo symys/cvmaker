@@ -19,13 +19,13 @@
         id="addcv-icon"
         src="../../../assets/addcv.png"
       />
-      <div class="cvkayit" *ngFor="let cv of user?.cvList">
+      <div class="cvkayit" *ngFor="let cv of user?.cvList; let i = index" >
         <div class="cvkayit">
           <div id="cv-title">{{cv.title}}</div>
           <img id="no-photo" src="../../../assets/avatar (1).png" />
           <div class="cv-detail-btns">
             <button id="cv-duzenle-btn">Düzenle</button>
-            <button id="cv-sil-btn">Sil</button>
+            <button id="cv-sil-btn" (click)="deleteCv(i)">Sil</button>
           </div>
         </div>
       </div>

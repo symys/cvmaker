@@ -44,7 +44,7 @@ export class CreatecvpageComponent {
   getCountries() {
     this.http.get('https://napi.sevkiyatvar.com/ulke').subscribe((countries: any) => {
       this.countries = countries;
-      console.log(this.countries)
+      // console.log(this.countries)
     });
   }
 

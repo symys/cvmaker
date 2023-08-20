@@ -4,19 +4,7 @@
       "id": 1,
       "email": "a@gmail.com",
       "password": "1234567",
-      "cvList": [
-        {
-          "title": "Seyma",
-          "name": "Seyma",
-          "lastname": "Demir",
-          "age": "28",
-          "birthday": "1994-11-23",
-          "birthcity": "MALATYA",
-          "birthcountry": "türkiye",
-          "talents": "Photoshop",
-          "summary": "Frontend Developer"
-        }
-      ]
+      "cvList": []
     }
   ]
 }
