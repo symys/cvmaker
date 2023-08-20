@@ -50,6 +50,25 @@ input {
   width: 16em;
 }
 
+option{
+  font-size: 1em;
+  padding: 1rem;
+  margin: 1em;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  background-color: #f9fafb;
+  width: 16em;
+}
+select{
+
+  
+  padding: 1rem;
+  margin: 1em;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  background-color: #f9fafb;
+  width: 18.5em;
+}
 
 #talent-section,
 #summary-section {

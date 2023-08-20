@@ -5,37 +5,7 @@
       "email": "a@gmail.com",
       "password": "1234567",
       "cvList": [
-        {
-          "title": "SeymaCV",
-          "name": "Seyma",
-          "lastname": "Demir",
-          "age": "28",
-          "birthday": "1994-11-23",
-          "birthcity": "Konya",
-          "birthcountry": "Türkiye",
-          "talents": "Photoshop",
-          "summary": "Frontend developer"
-        },
-        {
-          "title": "Ali",
-          "name": "kdfjnsvmk",
-          "lastname": "dsfsjkl",
-          "age": 0,
-          "birthcity": "",
-          "birthcountry": "",
-          "talents": "",
-          "summary": ""
-        },
-        {
-          "title": "hey",
-          "name": "",
-          "lastname": "",
-          "age": 0,
-          "birthcity": "",
-          "birthcountry": "",
-          "talents": "",
-          "summary": ""
-        }
+       
       ]
     }
   ]

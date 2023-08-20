@@ -15,21 +15,43 @@ export class CreatecvpageComponent {
     private router: Router
   ) {}
 
+  countries: any[] = [];
+  cities: any[] = [];
+  selectedCountry: string = "";
+  selectedCity: any = "";
+
   title:string="";
   name: string = '';
   lastname: string = '';
   age: number = 0;
   birthday: Date;
-  birthcity: string = '';
-  birthcountry: string = '';
+  // birthcity: string = '';
+  // birthcountry: string = '';
   talents:string="";
   summary:string="";
 
   users:any;
 
   ngOnInit() {
+    this.getCountries();
+     this.getCitiesByCountry();
+
     this.http.get('http://localhost:3000/users').subscribe((res) => {
       this.users = res;
+    });
+  }
+
+  getCountries() {
+    this.http.get('https://napi.sevkiyatvar.com/ulke').subscribe((countries: any) => {
+      this.countries = countries;
+      console.log(this.countries)
+    });
+  }
+
+  getCitiesByCountry() {
+    this.http.post('https://napi.sevkiyatvar.com/il', { ulke: this.selectedCountry}).subscribe((cities: any) => {
+      this.cities = cities;
+      // console.log(this.cities);
     });
   }
 
@@ -45,8 +67,8 @@ export class CreatecvpageComponent {
       lastname: this.lastname,
       age: this.age,
       birthday: this.birthday,
-      birthcity: this.birthcity,
-      birthcountry: this.birthcountry,
+      birthcity: this.selectedCity,
+      birthcountry: this.selectedCountry,
       talents:this.talents,
       summary:this.summary
     };

@@ -16,8 +16,22 @@
       <input type="date" placeholder="Doğum Tarihi" [(ngModel)]="birthday" />
     </div>
     <div class="input-divs">
-      <input placeholder="Doğum Yeri" [(ngModel)]="birthcity"/>
-      <input placeholder="Ülke" [(ngModel)]="birthcountry"/>
+      <!-- <input placeholder="Doğum Yeri" [(ngModel)]="birthcity"/>-->
+      <!-- <input placeholder="Ülke" [(ngModel)]="birthcountry"/>  -->
+      <!-- <select placeholder="Ülke" [(ngModel)]="selectedCountry" (change)="getCitiesByCountry()">
+        <option value="">Ülke Seçin</option>
+        <option *ngFor="let country of countries" [value]="country.KODU">{{ country.ADI }}</option>
+      </select> -->
+      <select placeholder="Ülke" [(ngModel)]="selectedCountry" (change)="getCitiesByCountry()">
+        <option value="">Ülke Seçin</option>
+        <option value="türkiye">Türkiye</option>
+        <!-- <option *ngFor="let country of countries" [value]="country.KODU">{{ country.ADI }}</option> -->
+      </select>
+      
+      <select placeholder="İl" [(ngModel)]="selectedCity" >
+        <option value="">İl Seçin</option>
+        <option *ngFor="let city of cities" [value]="city.il">{{ city.il }}</option>
+      </select>
     </div>
 
     <textarea id="talent-section" placeholder="Yetenek ve yetkinliklerinizden bahsediniz" [(ngModel)]="talents" ></textarea>
