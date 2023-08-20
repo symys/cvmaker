@@ -24,7 +24,7 @@
   width: 80vw;
 }
 
-button {
+#logout-button {
   background: #ff8500;
   color: #ffffff;
   padding: 0.5rem;
@@ -37,7 +37,43 @@ button {
   position: absolute;
 }
 
-button:hover {
+#cv-duzenle-btn,
+#cv-sil-btn {
+  display: flex;
+  flex-direction: row;
+  background: #9a73d3;
+  min-width: 4em;
+  color: #ffffff;
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+  font-size: 1.2rem;
+  font-family: "Righteous";
+  border-color: transparent;
+  text-align: center; 
+}
+
+
+#cv-sil-btn:hover, #cv-duzenle-btn:hover{
+  cursor: pointer;
+  background-color: #7947c5;
+}
+
+.cv-detail-btns {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+#cv-title{
+  color: #477487;
+  font-size: 1.5em;
+}
+
+#no-photo {
+  width: 8vw;
+}
+
+#logout-button:hover {
   background: #fca016;
   cursor: pointer;
 }
@@ -69,14 +105,14 @@ input {
   right: 1em;
 }
 
-img:hover {
-  cursor: pointer;
-}
-
 #addcv-icon {
   height: 10em;
   max-width: 15em;
   min-height: 15em;
+}
+
+#addcv-icon:hover{
+  cursor: pointer;
 }
 
 #cv-container {
@@ -89,68 +125,92 @@ img:hover {
 
 .cvkayit {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
   border-radius: 0.5rem;
   border-color: #e5e7eb;
   width: 100%;
-  background-color: #2982f6;
+  background-color: #dad3ee;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   max-width: 15em;
   min-height: 15em;
 }
 
 @media (max-width: 640px) {
-    h3 {
-        margin-top: 2em;
-        font-size: 1.5em;
-      }
+  h3 {
+    margin-top: 2em;
+    font-size: 1.5em;
+  }
 
-      input {
-        padding: 1rem;
-        margin: 1em;
-        border-radius: 0.5rem;
-        border-color: transparent;
-        background-color: #f9fafb;
-        width: 60vw;
-      }
-      
-      
-      #search-icon {
-        height: 2em;
-        position: absolute;
-        right: 1.2em;
-      }
+  input {
+    padding: 1rem;
+    margin: 1em;
+    border-radius: 0.5rem;
+    border-color: transparent;
+    background-color: #f9fafb;
+    width: 60vw;
+  }
 
-    button {
-        background: #ff8500;
-        color: #ffffff;
-        padding: 0.50rem;
-        margin-bottom: 1rem;
-        border-radius: 0.40rem;
-        font-size: 1rem;
-        font-family: "Righteous";
-        border-color: transparent;
-      }
+  #search-icon {
+    height: 2em;
+    position: absolute;
+    right: 1.2em;
+  }
 
-      #cv-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 1rem;
-        min-width: 80vw;
-      }
+  #logout-button {
+    background: #ff8500;
+    color: #ffffff;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+    font-family: "Righteous";
+    border-color: transparent;
+  }
 
-      #addcv-icon {
-        height: 8em;
-        max-width: 10em;
-        min-height: 10em;
-      }
-      
-      
-      .cvkayit {
-        max-width: 12em;
-        min-height: 12em;
-      }
+  #cv-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    min-width: 80vw;
+  }
+
+  #addcv-icon {
+    height: 8em;
+    max-width: 10em;
+    min-height: 10em;
+  }
+
+  .cvkayit {
+    max-width: 12em;
+    min-height: 12em;
+  }
+
+  #cv-duzenle-btn,
+#cv-sil-btn {
+  min-width: 4em;
+  padding: 0.3rem;
+  border-radius: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.cv-detail-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+
+#cv-title{
+  color: #477487;
+  font-size: 1em;
+}
+
+#no-photo {
+  width: 12vw;
+}
 }
