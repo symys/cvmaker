@@ -23,6 +23,10 @@
     gap: 1em;
     margin: 3em;
   }
+
+  #logo{
+    width: 7em;
+  }
   
   input {
     padding: 1rem;
@@ -67,6 +71,10 @@
           justify-content: center;
           gap: 0.5em;
           margin: 1em;
+        }
+
+        #logo{
+          width: 25vw;
         }
         
         input{

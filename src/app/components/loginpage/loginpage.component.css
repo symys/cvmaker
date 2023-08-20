@@ -24,6 +24,10 @@
   margin: 3em;
 }
 
+#logo{
+  width: 7em;
+}
+
 input {
   padding: 1rem;
   width: 30em;
@@ -80,12 +84,14 @@ span:hover {
         margin: 1em;
       }
       
+      #logo{
+        width: 30vw;
+      }
+
       input{
         width: 60vw;
         font-size: small;
       }
-     
-    
 
       .enter-button {
         background: #ff8500;

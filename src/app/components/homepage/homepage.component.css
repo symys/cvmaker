@@ -33,6 +33,10 @@ h4 {
   margin-bottom: 1em;
 }
 
+#logo{
+  width: 7em;
+}
+
 button {
   background: #ff8500;
   color: #ffffff;
@@ -78,6 +82,10 @@ span:hover{
       h4 {
         font-size: 0.75em;
         margin-bottom: 0.5em;
+      }
+
+      #logo{
+        width: 25vw;
       }
       
       button {
