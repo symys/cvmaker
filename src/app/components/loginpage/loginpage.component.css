@@ -31,7 +31,7 @@ input {
   font-size: large;
 }
 
-button {
+.enter-button {
   background: #ff8500;
   color: #ffffff;
   padding: 0.75rem;
@@ -42,9 +42,20 @@ button {
   border-color: transparent;
 }
 
-button:hover {
+.enter-button:hover {
   background: #fca016;
   cursor: pointer;
+}
+
+.disabled-button{
+  background: #7e7d7b;
+  color: #ffffff;
+  padding: 0.75rem;
+  margin-bottom: 2rem;
+  border-radius: 0.75rem;
+  font-size: 1.6rem;
+  font-family: "Righteous";
+  border-color: transparent;
 }
 
 span {
@@ -74,8 +85,20 @@ span:hover {
         font-size: small;
       }
      
-      button {
+    
+
+      .enter-button {
         background: #ff8500;
+        color: #ffffff;
+        padding: 0.50rem;
+        margin-bottom: 1rem;
+        border-radius: 0.40rem;
+        font-size: 1rem;
+        font-family: "Righteous";
+        border-color: transparent;
+      }
+      .disabled-button{
+        background: #7e7d7b;
         color: #ffffff;
         padding: 0.50rem;
         margin-bottom: 1rem;

@@ -15,6 +15,8 @@ export class LoginpageComponent {
   submitted = false;
 
   users: any;
+  wrongPasswordHolder : number = 1;
+  disableLoginButton: boolean = false;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -48,11 +50,26 @@ export class LoginpageComponent {
 
       if(user){
         // console.log(user.id)
+        this.disableLoginButton = false;
+
         this.authService.login(user.id);
         this.router.navigate(['/profile']);
       }
       else{
-        alert("email veya şifrenizi kontrol ederek tekrar deneyin lütfen")
+        if(this.wrongPasswordHolder < 3){
+          if(this.wrongPasswordHolder === 2){
+            alert("2 kez hatalı giriş denemesi! 3. kez hatalı giriş olduğunda 10 dakika bekletilirsiniz.")
+          }else{
+            alert("email veya şifrenizi kontrol ederek tekrar deneyin lütfen")
+          }
+          this.wrongPasswordHolder += 1;
+          
+        }else if(this.wrongPasswordHolder === 3){
+          this.wrongPasswordHolder = 0;
+          this.disableLoginButton = true;
+          alert("3 kez hatalı giriş yapıldı. 10 dakika bekletileceksiniz.")
+          setTimeout(() => {this.disableLoginButton = false;}, 100000)
+        }
       }
 
       

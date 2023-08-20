@@ -53,7 +53,7 @@
           <div *ngIf="submitted && registerForm.controls['password'].errors['minLength']" >Minimum password length must be 6</div>
         </div>
       </div>
-      <button id="login-button">GİRİŞ YAP</button>
+      <button id="login-button" [ngClass]="{'disabled-button': disableLoginButton, 'enter-button': !disableLoginButton}" [disabled]="disableLoginButton">GİRİŞ YAP</button>
     </form>
 
     <p>
