@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { AuthService } from 'src/app/services/auth.service';
+import * as alertifyjs from 'alertifyjs';
 
 @Component({
   selector: 'app-loginpage',
@@ -54,6 +55,7 @@ export class LoginpageComponent {
 
         this.authService.login(user.id);
         this.router.navigate(['/profile']);
+        alertifyjs.success('Giriş Başarılı!');
       }
       else{
         if(this.wrongPasswordHolder < 3){

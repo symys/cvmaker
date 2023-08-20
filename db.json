@@ -4,9 +4,7 @@
       "id": 1,
       "email": "a@gmail.com",
       "password": "1234567",
-      "cvList": [
-       
-      ]
+      "cvList": []
     }
   ]
 }

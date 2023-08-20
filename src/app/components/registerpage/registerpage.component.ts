@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { RegisterService } from 'src/app/services/register.service';
+import * as alertifyjs from 'alertifyjs';
 
 @Component({
   selector: 'app-registerpage',
@@ -63,6 +64,7 @@ export class RegisterpageComponent {
   
         // this.router.navigate(['/login']);
         setTimeout(() => {
+          alertifyjs.success('Kayıt Başarılı, Login sayfasına yönlendirileceksiniz');
           this.router.navigate(['/login']);
         }, 3000);
       }
