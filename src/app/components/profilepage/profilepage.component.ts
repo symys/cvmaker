@@ -44,11 +44,11 @@ export class ProfilepageComponent {
     // this.user.cvList = this.user.cvList.filter((cv : any, cvIndex:number) => cvIndex !== index)
 
     const loggedInUserId = this.authService.getLoggedInUserId();
-    const user = this.users.find((u: any) => u.id === loggedInUserId);
+    // const user = this.users.find((u: any) => u.id === loggedInUserId);
 
-   user.cvList = user.cvList.filter((cv : any, cvIndex:number) => cvIndex !== index)
+   this.user.cvList = this.user.cvList.filter((cv : any, cvIndex:number) => cvIndex !== index)
 
-    this.http.put(`http://localhost:3000/users/${loggedInUserId}`, user).subscribe(() =>{
+    this.http.put(`http://localhost:3000/users/${loggedInUserId}`, this.user).subscribe(() =>{
       this.router.navigate(['/profile'])
     })
   }
