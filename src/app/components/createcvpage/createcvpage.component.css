@@ -151,6 +151,16 @@ button:hover {
         background-color: #f9fafb;
         width: 70vw;
       }
+
+      option{
+      
+        width: 80vw
+      }
+      select{
+      
+
+        width: 80vw;
+      }
       
       #talent-section,
       #summary-section {
