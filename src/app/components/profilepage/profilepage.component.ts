@@ -17,7 +17,7 @@ export class ProfilepageComponent {
 
   users: any;
   user:any;
-  searchText: string = ''; // Arama metni
+  searchText: string = ''; // Filtreleme için Arama metni
   originalCvList: any;
   
   ngOnInit() {
