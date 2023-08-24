@@ -4,7 +4,35 @@
       "id": 1,
       "email": "a@gmail.com",
       "password": "1234567",
-      "cvList": []
+      "cvList": [
+        {
+          "title": "sdfdsgf",
+          "name": "",
+          "lastname": "",
+          "age": 0,
+          "birthcity": "",
+          "birthcountry": "",
+          "talents": "",
+          "summary": ""
+        }
+      ]
+    },
+    {
+      "email": "b@gmail.com",
+      "password": "1234567",
+      "cvList": [
+        {
+          "title": "sdsfdgfhg",
+          "name": "",
+          "lastname": "",
+          "age": 0,
+          "birthcity": "",
+          "birthcountry": "",
+          "talents": "",
+          "summary": ""
+        }
+      ],
+      "id": 2
     }
   ]
 }

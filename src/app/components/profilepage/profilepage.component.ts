@@ -16,10 +16,10 @@ export class ProfilepageComponent {
   ) {}
 
   users: any;
-  user:any;
+  user: any;
   searchText: string = ''; // Filtreleme için Arama metni
   originalCvList: any;
-  
+
   ngOnInit() {
     this.http.get('http://localhost:3000/users').subscribe((res) => {
       this.users = res;
@@ -40,25 +40,32 @@ export class ProfilepageComponent {
     this.router.navigate(['/home']);
   }
 
-  deleteCv(index:number){
+  deleteCv(index: number) {
     // this.user.cvList = this.user.cvList.filter((cv : any, cvIndex:number) => cvIndex !== index)
 
-    const loggedInUserId = this.authService.getLoggedInUserId();
-    // const user = this.users.find((u: any) => u.id === loggedInUserId);
+    if (confirm('CV silmek istediğinizden emin misiniz?')) {
+      // user clicked OK
 
-   this.user.cvList = this.user.cvList.filter((cv : any, cvIndex:number) => cvIndex !== index)
+      const loggedInUserId = this.authService.getLoggedInUserId();
+      // const user = this.users.find((u: any) => u.id === loggedInUserId);
 
-    this.http.put(`http://localhost:3000/users/${loggedInUserId}`, this.user).subscribe(() =>{
-      this.router.navigate(['/profile'])
-    })
+      this.user.cvList = this.user.cvList.filter(
+        (cv: any, cvIndex: number) => cvIndex !== index
+      );
+
+      this.http
+        .put(`http://localhost:3000/users/${loggedInUserId}`, this.user)
+        .subscribe(() => {
+          this.router.navigate(['/profile']);
+        });
+    } 
   }
 
   filterCvs() {
     // searchText'e göre CV'leri filtrele
     if (this.searchText) {
-      this.user.cvList = this.originalCvList.filter(
-        (cv: any) =>
-          cv.title.toLowerCase().includes(this.searchText.toLowerCase())
+      this.user.cvList = this.originalCvList.filter((cv: any) =>
+        cv.title.toLowerCase().includes(this.searchText.toLowerCase())
       );
     } else {
       // Arama metni boşsa, tüm CV'leri göster
